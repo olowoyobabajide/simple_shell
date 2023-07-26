@@ -72,7 +72,7 @@ int print_d(int input, int fd)
 	current = _abs_;
 	for (a = 1000000000; a > 1; a /= 10)
 	{
-		if (_abs_ / i)
+		if (_abs_ / a)
 		{
 			__putchar('0' + current / a);
 			count++;

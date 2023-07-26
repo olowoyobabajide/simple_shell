@@ -47,19 +47,19 @@ int _atoi(char *s)
 	int a = 0, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	while (s[i] != '\0' && flag != 2)
+	while (s[a] != '\0' && flag != 2)
 	{
-		if (s[i] == '-')
+		if (s[a] == '-')
 			sign *= -1;
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[a] >= '0' && s[a] <= '9')
 		{
 			flag = 1;
 			result *= 10;
-			result += (s[i] - '0');
+			result += (s[a] - '0');
 		}
 		else if (flag == 1)
 			flag = 2;
-		i++;
+		a++;
 	}
 	if (sign == -1)
 		output = -result;
