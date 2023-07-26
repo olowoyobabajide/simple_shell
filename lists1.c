@@ -49,7 +49,7 @@ char **list_to_strings(list_t *head)
             	}
 
 
-            	str = _strcpy(str, node->str);
+            	str = strcpy(str, node->str);
             	strs[a] = str;
     	}
     	strs[a] = NULL;

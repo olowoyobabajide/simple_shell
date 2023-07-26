@@ -1,5 +1,5 @@
-#ifndef SHELL_H_
-#define SHELL_H_
+#ifndef SHELL_H
+#define SHELL_H
 
 
 #include <stdio.h>
@@ -147,8 +147,7 @@ int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
 
-
-char *_strcpy(char *, char *);
+char *_strcpy(char *a, char *b);
 char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);

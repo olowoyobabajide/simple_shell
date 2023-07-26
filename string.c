@@ -56,63 +56,22 @@ char *starts_with(const char *haystack, const char *needle)
     	return ((char *)haystack);
 }
 
-
 /**
- * _strcat - joins 2 strings
- * @dest: destination buff
- * @src: source buff
- * Return: pointer
- */
-char *_strcat(char *dest, char *src)
-{
-    	char *ret = dest;
-
-
-    	while (*dest)
-            	dest++;
-    	while (*src)
-            	*dest++ = *src++;
-    	*dest = *src;
-    	return (ret);
-}
-/**
- * _puts - prints an inputted string
+ * _puts - prints  inputted string
  * @str: string
  * Return: Nothing
  */
 void _puts(char *str)
 {
-    	int a = 0;
-
+    	int a;
 
     	if (!str)
             	return;
-    a = 0;
+    	a = 0;
 
-    	for (a = 0; str[a] != '\0'; a++)
+    	while (str[a] != '\0')
     	{
             	_putchar(str[a]);
+		a++;
     	}
-}
-
-
-/**
- * _putchar - outputs character c to stdout
- * @c: char to print
- * Return: On success 1 on error, -1 is returned.
- */
-int _putchar(char c)
-{
-    	static int a;
-    	static char buf[WRITE_BUF_SIZE];
-
-
-    	if (c == BUF_FLUSH || a >= WRITE_BUF_SIZE)
-    	{
-            	write(1, buf, a);
-            	a = 0;
-    	}
-    	if (c != BUF_FLUSH)
-            	buf[a++] = c;
-    	return (1);
 }
